@@ -9,3 +9,23 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+body {
+    background-color: #f1f1f1;
+}
+
+.btn-gray {
+    @apply bg-gray-800 text-white p-2 rounded-sm;
+}
+
+.btn-outline {
+    @apply bg-gray-100 text-shadow-gray-800 p-2 rounded-sm outline-1;
+}
+
+.header-bg {
+    @apply bg-gray-50 outline-2 p-3;
+}
+
+.color-burn {
+    mix-blend-mode: color-burn;
+}
