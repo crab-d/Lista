@@ -31,8 +31,7 @@ class LoginController extends Controller
         //If no data from db return back to user with error
         return back()->withErrors([
             'email' => "invalid credentails",
-        ])->withInput(); //Bring back user input
-
+        ])->withInput($request->only('email'));
     }
 
     public function logout(Request $request) {

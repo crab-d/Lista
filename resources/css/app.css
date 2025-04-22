@@ -28,7 +28,7 @@ body {
 }
 
 .btn-outline {
-    @apply bg-gray-100 text-shadow-gray-800 p-2 rounded-sm outline-1;
+    @apply bg-gray-100 text-shadow-gray-800 p-2 rounded-sm outline-1 cursor-pointer;
 }
 
 .header-bg {

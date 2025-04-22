@@ -17,7 +17,7 @@
                 @error('email')
                 <p class="text-red-500 text-end text-sm"> {{ $message }} </p>
                 @enderror
-                <input placeholder="Email" id="email" name="email" type="email"
+                <input placeholder="Email" id="email" name="email" type="email" value="{{ old('email') }}"
                     class="bg-gray-100 px-4 py-2 border w-full border-gray-300 rounded-sm mb-4">
 
                 @error('password')
@@ -25,8 +25,8 @@
                 @enderror
 
                 <input placeholder="Password" id="password" name="password" type="password"
+                    value="{{ old('password') }}"
                     class="bg-gray-100 px-4 py-2 border w-full border-gray-300 rounded-sm mb-4">
-
 
                 <div class="flex space-x-4 mt-6">
                     <button class="w-full btn-gray" type="submit">LOG IN</button>

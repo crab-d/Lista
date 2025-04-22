@@ -13,18 +13,18 @@
         <p class="text-2xl font-bold ms-10 p-0 m-0 leading-none">LISTA</p>
 
         <nav class="w-max">
-            <ul class="flex flex-nowrap">
+            <ul class="flex flex-nowrap items-center">
 
-                <li class="btn-gray"><a href="#">Calendar</a></li>
-                <li class="btn-gray"><a href="#">New Task</a></li>
-                <li class="btn-gray"><a href="#">Profile</a></li>
-                <li class="btn-gray"><a href="{{ route('logout')}}">Log Out</a></li>
+                <li class="m-2 text-gray-600"><a href="#">Calendar</a></li>
+                <li class="m-2 text-gray-600"><a href="#">New Task</a></li>
+                <li class="m-2 text-gray-600"><a href="#">Profile</a></li>
+                <li class="m-1 me-5 text-gray-600 btn-outline"><a href="{{ route('logout')}}">Log Out</a></li>
 
             </ul>
         </nav>
     </header>
 
-    <main class="container">
+    <main class=" w-full border">
         {{ $slot }}
     </main>
 </body>

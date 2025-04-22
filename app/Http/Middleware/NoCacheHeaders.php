@@ -17,8 +17,8 @@ class NoCacheHeaders
      
     public function handle(Request $request, Closure $next): Response
     {
-        \Log::info('NoCacheHeaders middleware is running');
-        
+        //Disable saving response in cache
+        //This is to prevent the browser from caching the response
         $response = $next($request);
         return $response->header('Cache-Control', 'no-cache, no-store, must-revalidate')
                         ->header('Pragma', 'no-cache')
