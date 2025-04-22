@@ -1,3 +1,3 @@
 <x-userLayout>
-    <h1> TEST </h1>
+    <h1> Hello! {{ $player->name }}</h1>
 </x-userLayout>

@@ -20,8 +20,8 @@ class LoginController extends Controller
             'password' => ['required'],
         ]);
         
-        //Auth::attempt if the credentials store exisits in DATABASE
-        if (Auth::attempt($credentials)) {
+        //Auth::guard use modified data provider (player table)
+        if (Auth::guard('web')->attempt($credentials)) {
 
             //If exists make new session and redirect to Dashboard, avoid fixation attack
             $request->session()->regenerate();
@@ -31,7 +31,7 @@ class LoginController extends Controller
         //If no data from db return back to user with error
         return back()->withErrors([
             'email' => "invalid credentails",
-        ])->withInput();
+        ])->withInput(); //Bring back user input
 
     }
 
