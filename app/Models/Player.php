@@ -9,8 +9,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Player extends Authenticatable
 {
+    
     protected $fillable = ['name', 'email', 'password', 'status'];
     
     /** @use HasFactory<\Database\Factories\PlayerFactory> */
     use HasFactory;
+    
 }
